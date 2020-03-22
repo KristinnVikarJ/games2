@@ -1,0 +1,80 @@
+@import "style.scss";
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.button {
+    background: #f7786b;
+    font-size: 0.75em;
+}
+
+.resize {
+    width: 100%;
+    height: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.card {
+    color: red;
+
+    header {
+        padding: 0;
+    }
+    footer {
+        padding: 0;
+    }
+}
+
+.header {
+    background: rgb(65, 192, 235);
+    p{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.footer {
+    background: rgb(65, 192, 235);
+    p{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+html {
+    h1 {
+        color: orange;
+    }
+    body {
+        background: white;
+    }
+}
+
+.logo {
+    width: 30%; 
+    height: 30%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .flex {
+        display: inline-block;
+    }
+    .two>* {
+        width: 100%;
+    }
+    .logo {
+        height: 100%;
+        width: 100%;
+    }
+}

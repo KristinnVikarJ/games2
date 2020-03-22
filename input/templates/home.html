@@ -1,0 +1,29 @@
+
+{% extends "homelayout.html" %}
+
+{% block content %}
+
+<h1>Popular Games that I've worked on</h1>
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_%28emblem%29.svg" class = "logo">
+<div class="flex two demo">
+
+{% for post in posts %}
+
+    <div>
+
+        <article class="card resize">
+            <header>
+				<a href="posts/{{ post.slug }}.html">
+					<img src="{{ post.thumbnail }}" href="posts/{{ post.slug }}.html">
+				</a>
+            </header>
+        </article>
+
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
