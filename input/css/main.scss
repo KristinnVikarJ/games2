@@ -30,6 +30,54 @@
     }
 }
 
+.ad{
+    transition:width 2s,height 2s,transform 2s;
+    animation:1s ease-out 0s 1 pulse;
+    width:20%;
+    height:30%;
+    display:inline-block;
+    float:right
+}
+.ad:hover{
+    transform:rotate(360deg);
+    transition-duration:2s
+}
+.svg{
+    animation:1s ease-out 0s 1 anim;
+    animation-iteration-count:infinite;
+    position:absolute;
+    left:50%;
+    margin-left:-5%;
+    height:10%;
+    width:10%;
+    top:35%
+}
+@keyframes anim{
+    0%{
+        transform:translateY(-100%)
+    }
+    50%{
+        transform:translateY(0%)
+    }
+    100%{
+        transform:translateY(-100%)
+    }
+}
+@keyframes pulse{
+    0%{
+        transform:translateX(-100%)
+    }
+    25%{
+        transform:translateX(0%)
+    }
+    50%{
+        transform:translateY(-100%)
+    }
+    100%{
+        transform:translateY(0%)
+    }
+}
+
 .header {
     background: rgb(65, 192, 235);
     p{
@@ -59,11 +107,12 @@ html {
 }
 
 .logo {
-    width: 30%; 
-    height: 30%; 
-    margin-left: auto; 
-    margin-right: auto; 
-    display: block;
+
+    width:30%;
+    height:30%;
+    margin-left:auto;
+    margin-right:auto;
+    display:inline-block
 }
 
 @media screen and (max-width: 700px) {
