@@ -19,19 +19,25 @@ POSTS = {
 
 env = Environment(loader=PackageLoader('main', 'templates'))
 home_template = env.get_template('home.html')
+contact_template = env.get_template('contact.html')
 logo_template = env.get_template('logo.html')
 post_template = env.get_template('post.html')
 
 posts_metadata = [POSTS[post].metadata for post in POSTS]
 tags = [post['tags'] for post in posts_metadata]
 home_html = home_template.render(posts=posts_metadata, tags=tags)
+contact_html = contact_template.render()
 logo_template = logo_template.render(posts=posts_metadata, tags=tags)
 
 print("rendering index.html")
 with open('../output/index.html', 'w') as file:
     file.write(home_html)
 
-print("rendering index.html")
+print("rendering contact.html")
+with open('../output/contact.html', 'w') as file:
+    file.write(contact_html)
+
+print("rendering logo.html")
 with open('../output/logo.html', 'w') as file:
     file.write(logo_template)
 

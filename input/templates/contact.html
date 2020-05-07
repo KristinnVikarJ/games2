@@ -1,0 +1,63 @@
+{% extends "homelayout.html" %}
+
+{% block content %}
+
+<h1>Popular Games that I've worked on</h1>
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_%28emblem%29.svg" class = "logo">
+<a href = "http://www.squeakyclean-services.co.uk/"><img src = "./ad.jpg" class = "ad"></img></a>
+<img src = "./arrow.svg" class = "svg"></img>
+<div style="margin-left:auto;margin-right:auto;text-align: center; padding-bottom: 1%; width: 370px">
+    <form action="#">
+        <div class="mdl-layout">
+            <div class="mdl-card mdl-shadow--6dp">
+                <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                    <h2 class="mdl-card__title-text">Contact</h2>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield" data-required="true">
+                    <input class="mdl-textfield__input" type="text" id="sample1" required>
+                    <label class="mdl-textfield__label" for="sample1">Full Name</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" required>
+                    <label class="mdl-textfield__label" for="sample4">Phone Number</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" data-required="true">
+                    <input class="mdl-textfield__input" type="email" id="username" required/>
+                    <label class="mdl-textfield__label" for="username">Email</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" required></textarea>
+                    <label class="mdl-textfield__label" for="sample5">Reason For Contact...</label>
+                </div>   
+
+                <div style = "padding-bottom: 5%;">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">Sell Data To USA</span>
+                    </label>
+
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">Sell Data To Australia</span>
+                    </label>
+                </div>
+  
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="checkbox-3">
+                    <input type="radio" id="radio -1" class="mdl-radio__button" checked required>
+                    <span class="mdl-radio__label">Allow my data to be shared with 3rd parties</span>
+                </label>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
